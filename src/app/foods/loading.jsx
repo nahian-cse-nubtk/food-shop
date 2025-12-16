@@ -2,9 +2,9 @@ import React from 'react';
 
 const loading = () => {
     return (
-        <div className='grid grid-cols-3 gap-5 px-10'>
+        <div className='grid grid-cols-3 gap-5'>
             {
-                [...Array(12)].map((_,i)=><>
+                [...Array(12)].map((_,i)=>
                 <div key={i} className="w-80 rounded-2xl border p-4 shadow-sm animate-pulse">
       {/* Image Skeleton */}
       <div className="h-44 bg-gray-200 rounded-xl mb-4"></div>
@@ -22,7 +22,7 @@ const loading = () => {
       </div>
     </div>
 
-                </>
+
             )}
 
         </div>

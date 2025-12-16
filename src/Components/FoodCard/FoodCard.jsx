@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import AddToCartButton from '../AddToCartButton/AddToCartButton';
 
 const FoodCard = ({food}) => {
     return (
@@ -26,9 +27,7 @@ const FoodCard = ({food}) => {
             View Details
           </Link>
 
-          <button className="w-full rounded-xl bg-green-600 text-white px-4 py-2 hover:bg-green-700">
-            Add to Cart
-          </button>
+         <AddToCartButton key={food.id} food={food}></AddToCartButton>
         </div>
       </div>
     </div>

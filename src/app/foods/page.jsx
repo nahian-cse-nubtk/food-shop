@@ -1,3 +1,4 @@
+import CartItems from '@/Components/CartItems/CartItems';
 import FoodCard from '@/Components/FoodCard/FoodCard';
 import React from 'react';
 const getFoods = async()=>{
@@ -9,12 +10,18 @@ const getFoods = async()=>{
 const page = async() => {
     const foods = await getFoods()
     return (
-        <div className='py-5'>
-            <h1 className='text-3xl font-blod '>All foods are here: {foods.length}</h1>
+        <div className='py-5 grid grid-cols-12'>
+            <div className='col-span-10'>
+                <h1 className='text-3xl font-blod '>All foods are here: {foods.length}</h1>
             <div className='grid grid-cols-3 gap-5 px-10'>
                 {
                     foods.map(food=><FoodCard key={food.id} food={food}></FoodCard>)
                 }
+            </div>
+            </div>
+            <div className='border-2 col-span-2 mt-7 h-[120vh] p-3'>
+                <h1 className='text-3xl font-bold'>Cart Items</h1>
+                <CartItems></CartItems>
             </div>
         </div>
     );
