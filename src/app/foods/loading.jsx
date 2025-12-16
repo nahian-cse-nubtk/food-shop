@@ -7,7 +7,7 @@ const loading = () => {
                 [...Array(12)].map((_,i)=><>
                 <div key={i} className="w-80 rounded-2xl border p-4 shadow-sm animate-pulse">
       {/* Image Skeleton */}
-      <div className="h-60 bg-gray-200 rounded-xl mb-4"></div>
+      <div className="h-44 bg-gray-200 rounded-xl mb-4"></div>
 
       {/* Title Skeleton */}
       <div className="h-5 bg-gray-200 rounded w-3/4 mb-2"></div>

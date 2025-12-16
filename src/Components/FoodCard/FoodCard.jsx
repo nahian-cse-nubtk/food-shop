@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const FoodCard = ({food}) => {
@@ -21,9 +22,9 @@ const FoodCard = ({food}) => {
         </p>
 
         <div className="flex gap-3 pt-2">
-          <button className="w-full rounded-xl border px-4 py-2 hover:bg-gray-100">
+          <Link href={`/foods/${food.id}`} className="w-full rounded-xl border px-4 py-2 hover:bg-gray-100">
             View Details
-          </button>
+          </Link>
 
           <button className="w-full rounded-xl bg-green-600 text-white px-4 py-2 hover:bg-green-700">
             Add to Cart
